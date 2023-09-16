@@ -15,11 +15,11 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="<?= ('/assets/css/landing.css') ?>" rel="stylesheet" />
+    <link href="<?= base_url('/assets/css/landing.css') ?>" rel="stylesheet" />
     <!-- izitoast -->
-    <link rel="stylesheet" href="/assets/css/iziToast.min.css">
+    <link rel="stylesheet" href="<?= base_url('/assets/css/iziToast.min.css') ?>">
     <!-- jquery -->
-    <script src="/assets/js/jquery.min.js"></script>
+    <script src="<?= ('/assets/js/jquery.min.js') ?>"></script>
 </head>
 
 <body id="page-top">
@@ -27,7 +27,7 @@
     <!-- <div class="navbar-brand fixed-top" style="margin-left: 10vw; z-index: 1031; width: fit-content;"><img src="/image/<?= $logo ?>" width="100" class="img-fluid" alt="..." /></div> -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a href="/" class="h5 text-primary" style="text-decoration: none;"><img src="/image/<?= $logo ?>" width="50px" alt="..." />Simerawana</a>
+            <a href="/" class="h5 text-primary" style="text-decoration: none;"><img src="<?= base_url('/image//' . $logo) ?>" width="50px" alt="..." />Simerawana</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars ms-1"></i>
@@ -39,7 +39,7 @@
                     <li class="nav-item"><a class="nav-link" href="/#portfolio">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#sejarah">Sejarah</a></li>
-                    <li class="nav-item"><a class="nav-link " href="/dashboard" target="_blank"><?= icon('box-arrow-in-right') ?> Login</a></li>
+                    <li class="nav-item"><a class="nav-link " href="<?= base_url('dashboard') ?>" target="_blank"><?= icon('box-arrow-in-right') ?> Login</a></li>
                 </ul>
             </div>
         </div>
@@ -50,7 +50,7 @@
     <section class="page-section" id="bio">
         <div class="container">
             <div class="text-center">
-                <img src="/image/<?= $logo ?>" width="100" class="img-fluid" alt="..." />
+                <img src="<?= base_url('/image//' . $logo) ?>" width="100" class="img-fluid" alt="..." />
                 <h2 class="section-heading text-uppercase">Simerawana</h2>
             </div>
             <div class="row">
@@ -82,10 +82,11 @@
 
 
     <!-- Bootstrap core JS-->
-    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url('/assets/js/bootstrap.bundle.min.js') ?>"></script>
     <!-- Core theme JS-->
-    <script src="/assets/js/scriptsLanding.js"></script>
-    <script src="/assets/js/iziToast.min.js" type="text/javascript"></script>
+    <script src="<?= base_url('/assets/js/scriptsLanding.js') ?>"></script>
+    <script src="<?= base_url('/assets/js/iziToast.min.js') ?>"></script>
+
 
     <script>
         setBadgeCartQty();
