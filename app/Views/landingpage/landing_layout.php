@@ -8,7 +8,7 @@
     <meta name="author" content="" />
     <title>Simerawana</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="/landing/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="<?= base_url('/landing/favicon.ico') ?>" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -19,7 +19,7 @@
     <!-- izitoast -->
     <link rel="stylesheet" href="<?= base_url('/assets/css/iziToast.min.css') ?>">
     <!-- jquery -->
-    <script src="<?= ('/assets/js/jquery.min.js') ?>"></script>
+    <script src="<?= base_url('/assets/js/jquery.min.js') ?>"></script>
 </head>
 
 <body id="page-top">
