@@ -51,7 +51,7 @@
         <div class="container">
             <div class="text-center">
                 <img src="<?= base_url('/image//' . $logo) ?>" width="100" class="img-fluid" alt="..." />
-                <h2 class="section-heading text-uppercase">Simerawana</h2>
+                <!-- <h2 class="section-heading text-uppercase">Simerawana</h2> -->
             </div>
             <div class="row">
                 <div class="col text-center">

@@ -48,7 +48,7 @@ class ContentController extends MainController
                     $filepath = WRITEPATH . 'uploads/' . $file->store();
                     $portofolio[] = $file->getName();
                     $file = new File($filepath);
-                    $file->move(ROOTPATH . '\public\portofolio');
+                    $file->move(ROOTPATH . 'public/portofolio');
                 }
             }
         }
@@ -99,7 +99,7 @@ class ContentController extends MainController
                     $filepath = WRITEPATH . 'uploads/' . $file->store();
                     $allfoto[] = $file->getName();
                     $file = new File($filepath);
-                    $file->move(ROOTPATH . '\public\portofolio');
+                    $file->move(ROOTPATH . 'public/portofolio');
                 }
             }
         }
@@ -198,7 +198,7 @@ class ContentController extends MainController
                 $filepath = WRITEPATH . 'uploads/' . $imgTemp->store();
                 $data['img'] = $imgTemp->getName();
                 $file = new File($filepath);
-                $file->move(ROOTPATH . '\public\carousel');
+                $file->move(ROOTPATH . 'public/carousel');
             }
         }
 
