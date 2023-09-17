@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Custom Website Murat" />
+    <meta name="description" content="Custom Website Murah" />
     <meta name="keywords" content="Custom Website,PHP,Code Igniter,Laravel">
     <meta name="author" content="kicat" />
     <title>Simerawana</title>
