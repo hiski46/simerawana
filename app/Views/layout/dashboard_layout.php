@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dahboard Admin SaveTime Studio</title>
+    <link rel="icon" type="image/x-icon" href="<?= base_url('/landing/logo.png') ?>" />
+
+    <title>Dashboard Simerawana</title>
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .bd-placeholder-img {

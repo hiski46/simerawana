@@ -4,11 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content="Custom Website Murat" />
+    <meta name="keywords" content="Custom Website,PHP,Code Igniter,Laravel">
+    <meta name="author" content="kicat" />
     <title>Simerawana</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="<?= base_url('/landing/favicon.ico') ?>" />
+    <link rel="icon" type="image/x-icon" href="<?= base_url('/landing/logo.png') ?>" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -27,7 +28,7 @@
     <!-- <div class="navbar-brand fixed-top" style="margin-left: 10vw; z-index: 1031; width: fit-content;"><img src="/image/<?= $logo ?>" width="100" class="img-fluid" alt="..." /></div> -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a href="/" class="h5 text-primary" style="text-decoration: none;"><img src="<?= base_url('/image//' . $logo) ?>" width="50px" alt="..." />Simerawana</a>
+            <a href="/" class="h5 text-primary" style="text-decoration: none;"><img src="<?= base_url('/image//' . $logo) ?>" width="100px" alt="..." /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars ms-1"></i>
@@ -47,24 +48,27 @@
     <!-- Content -->
     <?= $this->renderSection('landing_content') ?>
 
-    <section class="page-section" id="bio">
+    <section class="page-section bg-dark" id="bio">
         <div class="container">
             <div class="text-center">
-                <img src="<?= base_url('/image//' . $logo) ?>" width="100" class="img-fluid" alt="..." />
-                <!-- <h2 class="section-heading text-uppercase">Simerawana</h2> -->
-            </div>
-            <div class="row">
-                <div class="col text-center">
-                    <b class="text-primary"><?= icon('geo-alt-fill', 18, 18) ?> </b> <?= $alamat ?>
-                    <b class="text-primary"><?= icon('telephone-fill', 18, 18) ?> </b> <?= $phone ?>
-                    <b class="text-primary"><?= icon('envelope-fill', 18, 18) ?> </b> <?= $email ?>
-                </div>
+                <img src="<?= base_url('/image//' . $logo) ?>" width="200" class="img-fluid" alt="..." />
             </div>
         </div>
     </section>
     <!-- Footer-->
     <footer class="footer py-4">
         <div class="container">
+            <div class="row mb-3 justify-content-between">
+                <div class="col-auto">
+                    <b class=""><?= icon('geo-alt-fill', 18, 18) ?> <?= $alamat ?></b>
+                </div>
+                <div class="col-auto">
+                    <b class=""><?= icon('telephone-fill', 18, 18) ?> <?= $phone ?></b>
+                </div>
+                <div class="col-auto">
+                    <b class=""><?= icon('envelope-fill', 18, 18) ?> <?= $email ?></b>
+                </div>
+            </div>
             <div class="row align-items-center">
                 <div class="col-lg-4 text-lg-start">Copyright &copy; Simerawana <?= date('Y') ?></div>
                 <div class="col-lg-4 my-3 my-lg-0">
@@ -72,10 +76,7 @@
                     <a class="btn btn-dark btn-social mx-2" target="_blank" href="<?= $facebook ?>" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a> -->
                 </div>
-                <div class="col-lg-4 text-lg-end">
-                    <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                    <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
-                </div>
+
             </div>
         </div>
     </footer>

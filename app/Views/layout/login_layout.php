@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <link rel="icon" type="image/x-icon" href="<?= base_url('/landing/logo.png') ?>" />
     <meta name="generator" content="Hugo 0.98.0">
-    <title>Signin Template · Bootstrap v5.2</title>
+    <title>Signin Simerawana</title>
 
 
     <link href="<?= base_url('/assets/css/bootstrap.min.css') ?>" rel="stylesheet">
