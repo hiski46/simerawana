@@ -168,7 +168,7 @@ class ContentController extends MainController
                 $filepath = WRITEPATH . 'uploads/' . $imgTemp->store();
                 $data['logo'] = $imgTemp->getName();
                 $file = new File($filepath);
-                $file->move(ROOTPATH . '\public\image');
+                $file->move(ROOTPATH . 'public/image');
             }
         }
         $biodata = [];
