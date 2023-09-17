@@ -149,7 +149,7 @@
                                     <span class="">
                                         <?= icon('people') ?>
                                     </span>
-                                    <?= lang('auth.index_heading') ?>
+                                    <?= lang('Auth.index_heading') ?>
                                 </a>
                             </li>
                         </ul>
