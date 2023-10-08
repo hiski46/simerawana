@@ -3,8 +3,31 @@
 
 <div class="container-lg">
     <form action="/content/portofolio/add" method="post" onsubmit="showLoader()" enctype="multipart/form-data">
-        <label for="" class="form-label">Pilih beberapa foto untuk di upload</label>
         <div class="row mb-2">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="" class="form-label">Judul</label>
+                    <input type="text" name="judul" class="form-control rounded-0" placeholder="Cth: Company Profile" required>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Teknologi</label>
+                    <select type="text" name="teknologi[]" id="teknologi" multiple="multiple" class="form-select rounded-0" placeholder="contoh: Company Profile" required>
+                        <option value=""></option>
+                        <?php foreach ($teknologi as $t) { ?>
+                            <option value="<?= $t->id ?>"><?= $t->nama ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="" class="form-label">Deskripsi</label>
+                    <textarea name="deskripsi" id="deskripsi" class="form-control rounded-0" required></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <label for="" class="form-label">Pilih beberapa foto untuk di upload</label>
             <div class="col-10" id="bungkus">
                 <div class="row mb-3">
                     <div class="col-10">
@@ -25,6 +48,25 @@
 
 <?= $this->section('javascript') ?>
 <script>
+    $(document).ready(function() {
+        $('#teknologi').select2({
+            placeholder: 'Pilih Teknologi'
+        });
+        $('#deskripsi').summernote({
+            height: 150,
+            placeholder: 'Deskrpsi',
+            toolbar: [
+                // [groupName, [list of button]]
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['font'],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']]
+            ]
+        });
+    });
+
     function addInput() {
         var bungkus = $('#bungkus');
         var input = bungkus.children('.row').first().clone();

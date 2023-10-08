@@ -114,6 +114,15 @@ class IonAuthSeeder extends \CodeIgniter\Database\Seeder
 		];
 		$this->db->table('biodata')->insertBatch($biodata);
 
+
+		$teknologi = [
+			['nama' => 'Laravel'],
+			['nama' => 'Codeigniter'],
+			['nama' => 'MySql'],
+			['nama' => 'Bootstrap'],
+		];
+		$this->db->table('teknologi')->insertBatch($teknologi);
+
 		$this->db->transComplete();
 	}
 }

@@ -6,6 +6,7 @@ use App\Controllers\MainController;
 use App\Models\BiodataModel;
 use App\Models\CarouselModel;
 use App\Models\PortofolioModel;
+use App\Models\TeknologiModel;
 use CodeIgniter\Files\File;
 
 class ContentController extends MainController
@@ -14,7 +15,10 @@ class ContentController extends MainController
     {
         $data['title'] = 'Portofolio';
         $portofolioModel = new PortofolioModel();
+        $teknologiModel = new TeknologiModel();
+
         $data['portofolio'] = $portofolioModel->findAll();
+        $data['teknologi'] = $teknologiModel->findAll();
         return $this->template('dashboard/content/portofolio', $data);
     }
     public function biodata()
@@ -35,6 +39,8 @@ class ContentController extends MainController
     public function halamanAddPortofolio()
     {
         $data['title'] = 'Tambah Portofolio';
+        $teknologiModel = new TeknologiModel();
+        $data['teknologi'] = $teknologiModel->findAll();
         return $this->template('dashboard/content/add_portofolio', $data);
     }
     public function addPortofolio()
@@ -53,6 +59,9 @@ class ContentController extends MainController
             }
         }
         $data['portofolio'] = json_encode($portofolio);
+        $data['judul'] = $this->request->getPost('judul');
+        $data['deskripsi'] = $this->request->getPost('deskripsi');
+        $data['teknologi'] = json_encode($this->request->getPost('teknologi'));
         $portofolioModel = new PortofolioModel();
         $save = $portofolioModel->save($data);
         if ($save) {
@@ -66,6 +75,8 @@ class ContentController extends MainController
         $portofolioModel = new PortofolioModel();
         $data['title'] = "Edit Portofolio";
         $data['portofolio'] = $portofolioModel->find($id);
+        $teknologiModel = new TeknologiModel();
+        $data['teknologi'] = $teknologiModel->findAll();
         return $this->template('dashboard/content/edit_portofolio', $data);
     }
 

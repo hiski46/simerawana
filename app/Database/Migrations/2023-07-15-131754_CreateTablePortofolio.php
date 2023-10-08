@@ -16,6 +16,16 @@ class CreateTablePortofolio extends Migration
                 'unsigned'      => true,
                 'auto_increment' => true
             ],
+            'judul' => [
+                'type' => 'varchar',
+                'constraint'   => 100,
+            ],
+            'teknologi' => [
+                'type' => 'json',
+            ],
+            'deskripsi' => [
+                'type' => 'text',
+            ],
             'portofolio' => [
                 'type' => 'json',
             ],

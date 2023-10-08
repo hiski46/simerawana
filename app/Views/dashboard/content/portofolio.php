@@ -10,8 +10,9 @@
             <thead>
                 <tr>
                     <th>Portofolio</th>
+                    <th>Judul</th>
+                    <th>Teknologi</th>
                     <th>Jumlah File</th>
-                    <th>Tanggal</th>
                     <th>Aktif</th>
                     <th>Aksi</th>
                 </tr>
@@ -25,8 +26,13 @@
                         <?php } else { ?>
                             <td>Tidak ada Foto</td>
                         <?php } ?>
+                        <td><?= $porto->judul ?></td>
+                        <td>
+                            <?php foreach (json_decode($porto->teknologi) as $val) { ?>
+                                <span class="badge text-bg-dark"><small><?= findById($teknologi, $val)[0]->nama ?></small></span>
+                            <?php } ?>
+                        </td>
                         <td><?= count($imgs) ?></td>
-                        <td><?= $porto->created_at ?></td>
                         <td>
                             <div class="form-check form-switch">
                                 <input class="form-check-input" style="cursor: pointer;" type="checkbox" role="switch" onclick="status(this, '<?= $porto->id ?>' )" id="flexSwitchCheckChecked" <?= $porto->is_active ? 'checked' : '' ?>>

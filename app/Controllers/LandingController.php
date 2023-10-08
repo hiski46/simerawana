@@ -9,6 +9,7 @@ use App\Models\MakeupModel;
 use App\Models\PaketCategoryModel;
 use App\Models\PaketModel;
 use App\Models\PortofolioModel;
+use App\Models\TeknologiModel;
 use App\Models\TransaksiModel;
 use Exception;
 
@@ -25,8 +26,11 @@ class LandingController extends MainController
         $this->countVisitor();
         $biodata = new BiodataModel();
         $portofolio = new PortofolioModel();
+        $teknologiModel = new TeknologiModel();
+
         $carousel = new CarouselModel();
         $data = $biodata->getBiodata();
+        $data['teknologi'] = $teknologiModel->findAll();
         $data['carousel'] = $carousel->findAll();
         $data['title'] = 'Home';
         $data['nav_active'] = 'home';
