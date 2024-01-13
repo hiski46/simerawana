@@ -86,7 +86,7 @@
                         <div class="d-flex h-100" data-aos="fade-up" data-aos-duration="1500">
                             <div class="project-text w-100 my-auto text-center text-lg-left">
                                 <img src="<?= base_url('/assets-new/logo.png') ?>" class="logo" width="20" alt="">
-                                <h4 class="text-white">Desain Web Kreatif</h4>
+                                <h4 class="text-white">Pembuatan Website</h4>
                                 <p class="mb-0 text-white-50">Kami merancang dan mengembangkan berbagai jenis website, mulai dari website perusahaan hingga toko online yang interaktif. </p>
                             </div>
                         </div>
@@ -101,7 +101,7 @@
                         <div class="d-flex h-100" data-aos="fade-up" data-aos-duration="1500">
                             <div class="project-text w-100 my-auto text-center text-lg-right">
                                 <img src="<?= base_url('/assets-new/logo.png') ?>" class="logo" width="20" alt="">
-                                <h4 class="text-white">Pembuatan Website</h4>
+                                <h4 class="text-white">Desain Web Kreatif</h4>
                                 <p class="mb-0 text-white-50"> Kami menciptakan tampilan dan pengalaman pengguna yang menarik, responsif, dan sesuai dengan identitas produk Anda.</p>
                             </div>
                         </div>
