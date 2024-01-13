@@ -166,7 +166,7 @@
                             <i class="fab fa-twitter text-primary mb-2"></i>
                             <h4 class="text-uppercase m-0">Twitter</h4>
                             <hr class="my-4 mx-auto" />
-                            <div class="small text-black-50"><a href="https://https://twitter.com/<?= $facebook ?>"><?= $facebook ?></a></div>
+                            <div class="small text-black-50"><a href="https://twitter.com/<?= $facebook ?>" target="_blank"><?= $facebook ?></a></div>
                         </div>
                     </div>
                 </div>
