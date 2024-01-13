@@ -107,7 +107,7 @@
                                                             Deskripsi
                                                         </th>
                                                         <td> :<?= $por->deskripsi ?>
-
+                                                                
                                                         </td>
                                                     </tr>
                                                 </tbody>

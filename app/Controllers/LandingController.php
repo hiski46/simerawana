@@ -35,7 +35,8 @@ class LandingController extends MainController
         $data['title'] = 'Home';
         $data['nav_active'] = 'home';
         $data['porto'] = $portofolio->where('is_active', 1)->findAll();
-        return $this->templateLanding('landingpage/home', $data);
+        // return $this->templateLanding('landingpage/home', $data);
+        return view('landingpage/home-new', $data);
     }
 
     public function countVisitor()
