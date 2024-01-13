@@ -38,6 +38,25 @@ class LandingController extends MainController
         // return $this->templateLanding('landingpage/home', $data);
         return view('landingpage/home-new', $data);
     }
+    public function indexOld()
+    {
+        // $this->countVisitor();
+        $biodata = new BiodataModel();
+        $portofolio = new PortofolioModel();
+        $teknologiModel = new TeknologiModel();
+
+        $carousel = new CarouselModel();
+        $data = $biodata->getBiodata();
+        $data['teknologi'] = $teknologiModel->findAll();
+        $data['carousel'] = $carousel->findAll();
+        $data['title'] = 'Home';
+        $data['nav_active'] = 'home';
+        $data['porto'] = $portofolio->where('is_active', 1)->findAll();
+        return $this->templateLanding('landingpage/home', $data);
+        // return view('landingpage/home-new', $data);
+    }
+
+
 
     public function countVisitor()
     {

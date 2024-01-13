@@ -48,6 +48,7 @@ $routes->group('auth', static function ($routes) {
 });
 $routes->get('dashboard', 'Home::index');
 $routes->get('/', 'LandingController::index');
+$routes->get('/lama', 'LandingController::indexOld');
 
 
 $routes->group('content', static function ($routes) {
