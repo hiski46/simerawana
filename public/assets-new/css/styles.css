@@ -11234,10 +11234,8 @@ body {
   background-size: cover;
 }
 
-body {
-  overflow-x: hidden
-}
-
-.aos-init:not(.aos-animate):after {
-  position: fixed;
-}
+@media (max-width: 768px) {
+  .hideOverflowOnMobile {
+  overflow: hidden;
+  }
+  }
