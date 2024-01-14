@@ -19,22 +19,13 @@
     <link href="<?= base_url('/assets-new/css/styles.css') ?>" rel="stylesheet" />
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-        body {
-            overflow-x: hidden
-        }
-
-        .aos-init:not(.aos-animate):after {
-            position: fixed;
-        }
-    </style>
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#page-top"> <img src="<?= base_url('/assets-new/logo.png') ?>" class="logo" width="20" alt=""> simerawana</a>
+            <a class="navbar-brand" href="#page-top"> <img src="<?= base_url('/assets-new/logo.png') ?>" class="logo" width="30" alt=""> simerawana</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
@@ -43,7 +34,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
                     <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -166,7 +157,7 @@
             </div>
         </section> -->
     <!-- Contact-->
-    <section class="contact-section bg-black" id="signup">
+    <section class="contact-section bg-black" id="contact">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5">
                 <div class="col-md-4 mb-3 mb-md-0">

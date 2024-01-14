@@ -11233,3 +11233,11 @@ body {
   background-blend-mode: overlay;
   background-size: cover;
 }
+
+body {
+  overflow-x: hidden
+}
+
+.aos-init:not(.aos-animate):after {
+  position: fixed;
+}
