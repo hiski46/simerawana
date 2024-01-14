@@ -19,6 +19,15 @@
     <link href="<?= base_url('/assets-new/css/styles.css') ?>" rel="stylesheet" />
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            overflow-x: hidden
+        }
+
+        .aos-init:not(.aos-animate):after {
+            position: fixed;
+        }
+    </style>
 </head>
 
 <body id="page-top">
