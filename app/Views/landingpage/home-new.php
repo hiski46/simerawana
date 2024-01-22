@@ -34,6 +34,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
                     <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tech">Stack</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -109,7 +110,7 @@
                 </div>
             </div>
             <!-- Project One Row-->
-            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+            <div class="row gx-0 mb-lg-0 justify-content-center">
                 <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1500"><img class="img-fluid" src="<?= base_url('/assets-new/img/maintenance.jpg') ?>" alt="..." /></div>
                 <div class="col-lg-6">
                     <div class="bg-black text-center h-100 project">
@@ -125,6 +126,50 @@
             </div>
 
         </div>
+    </section>
+    <section class="bg-light tech-section" id="tech">
+        <div class="container-fluid">
+            <div class="row row-cols-md-6 row-cols-sm-4 gy-5 gx-sm-4 justify-content-center">
+                <div class="col text-center">
+                    <img src="<?= base_url('/tech/laravel.min.svg') ?>" class="tech-icon" alt="..."><br>
+                    <caption class="tech-caption">Laravel</caption>
+                </div>
+                <div class="col text-center">
+                    <img src="<?= base_url('/tech/ci-logo.png') ?>" class="tech-icon" alt="..."><br>
+                    <caption class="tech-caption">Codeigniter</caption>
+                </div>
+                <div class="col text-center">
+                    <img src="<?= base_url('/tech/bootstrap-logo.png') ?>" class="tech-icon" alt="..."><br>
+                    <caption class="tech-caption">Bootstrap</caption>
+                </div>
+                <div class="col text-center">
+                    <img src="<?= base_url('/tech/php-logo.svg') ?>" class="tech-icon" alt="..."><br>
+                    <caption class="tech-caption">PHP</caption>
+                </div>
+                <div class="col text-center">
+                    <img src="<?= base_url('/tech/js.png') ?>" class="tech-icon" alt="..."><br>
+                    <caption class="tech-caption">Javascript</caption>
+                </div>
+                <div class="col text-center">
+                    <img src="<?= base_url('/tech/html.png') ?>" class="tech-icon" alt="..."><br>
+                    <caption class="tech-caption">HTML</caption>
+                </div>
+                <div class="col text-center">
+                    <img src="<?= base_url('/tech/css.png') ?>" class="tech-icon" alt="..."><br>
+                    <caption class="tech-caption">CSS</caption>
+                </div>
+
+                <div class="col text-center">
+                    <img src="<?= base_url('/tech/jquery.svg') ?>" class="tech-icon" alt="..."><br>
+                    <caption class="tech-caption">Jquery</caption>
+                </div>
+                <div class="col text-center">
+                    <img src="<?= base_url('/tech/mysql.png') ?>" class="tech-icon" alt="..."><br>
+                    <caption class="tech-caption">MySql</caption>
+                </div>
+            </div>
+        </div>
+
     </section>
     <!-- Signup-->
     <!-- <section class="signup-section" id="signup">
