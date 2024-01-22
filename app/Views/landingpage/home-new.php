@@ -34,7 +34,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
                     <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#tech">Stack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tech">Tools</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
