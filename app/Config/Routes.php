@@ -48,6 +48,7 @@ $routes->group('auth', static function ($routes) {
 });
 $routes->get('dashboard', 'Home::index');
 $routes->get('/', 'LandingController::index');
+$routes->get('/detail-porto/(:num)', 'LandingController::getPorto/$1');
 $routes->get('/lama', 'LandingController::indexOld');
 
 

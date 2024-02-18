@@ -80,4 +80,14 @@ class LandingController extends MainController
             $this->visitor->db->query("UPDATE visitor SET hits=hits+1, online='" . $waktu . "' WHERE ip='" . $ip . "' AND date='" . $date . "'");
         }
     }
+
+    public function getPorto($id)
+    {
+        $teknologiModel = new TeknologiModel();
+        $portoModel = new PortofolioModel();
+        $data['porto'] = $portoModel->find($id);
+        $data['teknologi'] = $teknologiModel->findAll();
+
+        return view('landingpage/modal/detail-porto', $data);
+    }
 }

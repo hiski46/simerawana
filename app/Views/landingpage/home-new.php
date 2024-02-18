@@ -34,6 +34,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
                     <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#porto">Portofolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#tech">Tools</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -127,6 +128,50 @@
 
         </div>
     </section>
+    <section class="bg-light porto-section" id="porto">
+        <div class="container-md">
+            <div class="row">
+                <!-- Portfolio item 1 modal popup-->
+                <div class="portfolio-modal modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg p-0">
+                        <div class="modal-content">
+                            <div class="modal-body p-0" id="portfolioModalBody">
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-dark py-1 px-2" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php if (count($porto) > 0) { ?>
+                    <?php foreach ($porto as $key => $por) { ?>
+                        <?php $imgs = json_decode($por->portofolio) ?>
+                        <div class="col-lg-4 col-sm-6 mb-4 ">
+                            <div class="portfolio-item bg-white shadow" onclick="modalPorto(<?= $por->id ?>)">
+                                <div class="portfolio-link " style="text-decoration: none; cursor:pointer;" data-bs-toggle="modal" href="#portfolioModal<?= $key ?>">
+                                    <div class="m-3 py-3">
+                                        <div class="mb-3">
+                                            <h5 class="text-muted"><?= $por->judul ?></h5>
+                                            <?php foreach (json_decode($por->teknologi) as $val) { ?>
+                                                <span class="badge text-bg-dark"><small><?= findById($teknologi, $val)[0]->nama ?></small></span>
+                                            <?php } ?>
+                                        </div>
+                                        <img class="w-100 " style="object-fit: contain; height: 30vh;" src="/portofolio/<?= $imgs[0] ?>" alt="..." />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
+                <?php } else { ?>
+                    <div class="col text-center">
+                        <h3 class="section-subheading text-muted my-auto">Belum ada portofolio yang ditambahkan</h3>
+                    </div>
+                <?php } ?>
+
+            </div>
+        </div>
+    </section>
     <section class="bg-light tech-section" id="tech">
         <div class="container-fluid">
             <div class="row row-cols-md-6 row-cols-sm-4 gy-5 gx-sm-4 justify-content-center">
@@ -171,36 +216,7 @@
         </div>
 
     </section>
-    <!-- Signup-->
-    <!-- <section class="signup-section" id="signup">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-10 col-lg-8 mx-auto text-center">
-                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-                       
-                     
-                            <div class="row input-group-newsletter">
-                                <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                                <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
-                            </div>
-                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
-                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
-                           
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3 mt-2 text-white">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                          
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section> -->
+
     <!-- Contact-->
     <section class="contact-section bg-black" id="contact">
         <div class="container px-4 px-lg-5">
@@ -245,6 +261,9 @@
             </div>
         </div>
     </section>
+
+
+
     <!-- Footer-->
     <footer class="footer bg-black small text-center text-white-50">
         <div class="container px-4 px-lg-5">Copyright &copy; simerawana <?= date('Y') ?></div>
@@ -284,6 +303,23 @@
         $(document).ready(function() {
             $('[data-aos]').parent().addClass('hideOverflowOnMobile');
         })
+
+        function modalPorto(id) {
+            $('#portfolioModal').modal('show');
+            $.ajax({
+                url: '/detail-porto/' + id,
+                method: 'GET',
+                beforeSend: function() {
+                    html = `<div class="d-flex justify-content-center align-items-center" style="min-height:50vh;"> <div class="spinner-border text-dark " role="status">
+                            <span class="visually-hidden">Loading...</span>
+                            </div></div>`;
+                    $('#portfolioModalBody').html(html);
+                },
+                success: function(res) {
+                    $('#portfolioModalBody').html(res);
+                }
+            })
+        }
     </script>
 </body>
 

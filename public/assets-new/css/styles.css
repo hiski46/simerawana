@@ -11246,6 +11246,10 @@ body {
     padding-bottom:10rem;
     
   }
+  .porto-section{
+    padding-bottom:10rem;
+    
+  }
 
   img.tech-icon{
     height: 4rem;
@@ -11259,4 +11263,12 @@ body {
 
   caption.tech-caption{
     font-size: 10;
+  }
+
+  .portfolio-item{
+    transition: transform .2s;
+  }
+
+  .portfolio-item:hover{
+    transform: scale(1.1);
   }
