@@ -38,6 +38,10 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+$routes->get('dashboard', 'Home::index');
+$routes->get('/', 'LandingController::index');
+$routes->get('/landingpage/detail-porto/(:num)', 'LandingController::getPorto/$1');
+$routes->get('/landingpage/lama', 'LandingController::indexOld');
 $routes->group('auth', static function ($routes) {
     $routes->get('(:any)', 'Auth::$1');
     $routes->post('(:any)', 'Auth::$1');
@@ -46,10 +50,6 @@ $routes->group('auth', static function ($routes) {
     // $routes->post('deactivate/(:any)', 'Auth::deactivate/$1');
     // $routes->get('logout', 'Auth::logout', ['filter' => 'login']);
 });
-$routes->get('dashboard', 'Home::index');
-$routes->get('/', 'LandingController::index');
-$routes->get('/detail-porto/(:num)', 'LandingController::getPorto/$1');
-$routes->get('/lama', 'LandingController::indexOld');
 
 
 $routes->group('content', static function ($routes) {

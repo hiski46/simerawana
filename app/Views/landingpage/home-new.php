@@ -307,7 +307,7 @@
         function modalPorto(id) {
             $('#portfolioModal').modal('show');
             $.ajax({
-                url: '/detail-porto/' + id,
+                url: '/landingpage/detail-porto/' + id,
                 method: 'GET',
                 beforeSend: function() {
                     html = `<div class="d-flex justify-content-center align-items-center" style="min-height:50vh;"> <div class="spinner-border text-dark " role="status">
