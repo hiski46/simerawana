@@ -11266,7 +11266,7 @@ body {
   }
 
   .portfolio-item{
-    transition: transform .2s;
+    transition: transform .5s;
   }
 
   .portfolio-item:hover{
